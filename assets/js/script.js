@@ -1,21 +1,40 @@
 // Assignment code here
-
+var passwordAttributes =[
+  {uppercase: "ABCDEFGHIJKLMNOPQRSTUVWXYZ"},
+  {lowercase: "abcdefghijklmnopqrstuvwxyz"},
+  {numbers: "0123456789"},
+ // {special: /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/</>}
+];
+console.log(passwordAttributes);
 /*
-var characterType = function() {
-  var characterTypePrompt = window.prompt (
-"What character types would you like to be used?"
-  );
-
-  characterTypePrompt = parseInt(characterTypePrompt);
-
-  switch(characterTypePrompt) {
-//case 1: placeholder.numbers();
-//break;
-  }
+var passwordDefine = {
+  length: getPasswordLength(),
 }
 */
+var getPasswordLength= prompt('What is your password length?');
+if (getPasswordLength < 8 && getPasswordLength > 128){
+  alert('Your password has been set to ' + getPasswordLength);
+} else {
+ getPasswordLength= prompt("What is your password length?");
+}
+console.log(getPasswordLength);
 
-var password
+
+
+
+
+
+//passwords parameters
+ 
+
+
+
+
+
+
+
+
+
 
 
 
