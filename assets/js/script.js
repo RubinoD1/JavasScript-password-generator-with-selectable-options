@@ -1,5 +1,12 @@
 function generatePassword(){
-  
+  //1.need to add prompts for the password criteria
+  // a) need to have a prompt for the pass length (between 8 and 128)
+  // b) need to prompt if user wants lower, upper, numeric, or special characters.
+  //2. validate the input. Atleast one character type is being selected and length in range. 
+  //3. need to generate password. 
+ 
+  //4.need to display the generated pass on the page. 
+  return "Generated password will go here"
 }
 
 // Get references to the #generate element - this targets the generate id (which is a button)
