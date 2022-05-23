@@ -36,7 +36,7 @@ function generatePassword(){
 
   numbers=confirm("Do you want to use numbers?");
   if (numbers) {
-    uppercase="0123456789";
+    numbers="0123456789";
   }else {
     numbers= "";
   }
@@ -56,7 +56,7 @@ function generatePassword(){
     for (var i = 0, n = charset.length; i < length; ++i) {
       password += charset.charAt(Math.floor(Math.random() * n));
   }
-
+  
 //4.need to display the generated pass on the page. 
   return password;
 };
