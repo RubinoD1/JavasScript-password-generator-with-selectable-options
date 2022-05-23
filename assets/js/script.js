@@ -1,8 +1,8 @@
-var passwordLength= ""
+var passwordLength= "";
 var lowercase= "";
-var uppercase=  "";
+var uppercase= "";
 var numbers= "";
-var special= "~`! @#$%^&*()_-+={[}]|:\";'<,>.?/";
+var special= "";
 
 
 
@@ -18,7 +18,7 @@ function generatePassword(){
     passwordLength=prompt('Please select a password length (must be between 8 and 128).');
     return generatePassword();
   }
-  
+  passwordLength = parseInt(passwordLength);
   // b) need to prompt if user wants lower, upper, numeric, or special characters.
   lowercase=confirm("Do you want to use lowercase letters?");
   if (lowercase) {
@@ -47,29 +47,21 @@ function generatePassword(){
   }else {
     special= "";
   }
-
-
-
-
-
-  console.log(special);
-
-  
-  
-
-  
-   
-
-  
-
- 
- 
   //2. validate the input. Atleast one character type is being selected and length in range. 
   //3. need to generate password. 
- 
-  //4.need to display the generated pass on the page. 
-  return "Generated password will go here"
-}
+  
+    var length= passwordLength;
+    charset = lowercase + uppercase + numbers + special;
+    password="";
+    for (var i = 0, n = charset.length; i < length; ++i) {
+      password += charset.charAt(Math.floor(Math.random() * n));
+  }
+
+//4.need to display the generated pass on the page. 
+  return password;
+};
+
+
 
 // Get references to the #generate element - this targets the generate id (which is a button)
 var generateBtn = document.querySelector("#generate");
