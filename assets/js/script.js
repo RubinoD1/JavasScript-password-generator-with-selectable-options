@@ -6,6 +6,15 @@ const selectableSets ={
   numbers:numberSet,
   symbols:symbolSet
 };
+
+//**Do I need the ;? test */
+//Setting generatedPassword to a empty string. 
+let generatedPassword = "";
+
+//variable to keep track of choices
+const userChoices = lowercase + uppercase + numbers + symbols;
+
+//
  
 
 
@@ -73,7 +82,7 @@ function lowercaseSet(){
   return String.fromCharCode(Math.floor(Math.random() *26) +97);
 }
 
-function UppercaseSet(){
+function uppercaseSet(){
     return String.fromCharCode(Math.floor(Math.random() *26) +65);
   }
 
