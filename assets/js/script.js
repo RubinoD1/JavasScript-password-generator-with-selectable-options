@@ -1,12 +1,3 @@
-var passwordLength= "";
-var lowercase= "";
-var uppercase= "";
-var numbers= "";
-var special= "";
-
-
-
-
 function generatePassword(){
   //1.need to add prompts for the password criteria
   // a) need to have a prompt for the pass length (between 8 and 128)
@@ -56,12 +47,9 @@ function generatePassword(){
     for (var i = 0, n = charset.length; i < length; ++i) {
       password += charset.charAt(Math.floor(Math.random() * n));
   }
-  
 //4.need to display the generated pass on the page. 
   return password;
 };
-
-
 
 // Get references to the #generate element - this targets the generate id (which is a button)
 var generateBtn = document.querySelector("#generate");
@@ -74,7 +62,6 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 //this line takes the pass and displays it on the screen
   passwordText.value = password;
-
 }
 
 // Add event listener to generate button- looks for a click to trigger
