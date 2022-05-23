@@ -11,11 +11,53 @@ const selectableSets ={
 //Setting generatedPassword to a empty string. 
 let generatedPassword = "";
 
+
 //variable to keep track of choices
 const userChoices = lowercase + uppercase + numbers + symbols;
 
-//
- 
+//Creating an array to filter out anything that equals false. This will allow me to use boolean values for my user choices.
+ const typesArr= [
+   {
+     lowercase
+   },
+   {
+     uppercase
+   },
+   {
+     numbers
+   },
+   {
+     symbols
+   },
+ ].filter(item=> Object.values(item)[0]);
+
+ //trigger on click
+ function passwordDefine(){
+window.alert("Welcome to Password Generator!");
+var passwordDefinePrompt= window.prompt(
+  "Please select if you would like to use: 1.Lowercase letters, 2. Uppercase letters, 3. Both, or 4.None."
+);
+passwordDefinePrompt =parseInt(passwordDefinePrompt);
+
+switch (passwordDefinePrompt) {
+  case 1:
+    selectableSets.uppercase= 0;
+    break;
+
+    case 2:
+    selectableSets.lowercase=0;
+    break;
+
+    case 3:
+      break;
+
+    case 4:
+      selectableSets.lowercase=0;
+      selectableSets.uppercase=0;
+      break;
+}
+
+ };
 
 
 /*
