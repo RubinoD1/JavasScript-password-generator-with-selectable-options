@@ -1,6 +1,22 @@
+var passwordLength= ""
+
+
 function generatePassword(){
   //1.need to add prompts for the password criteria
   // a) need to have a prompt for the pass length (between 8 and 128)
+  passwordLength= parseInt(window.prompt("Please select a password length (must be between 8 and 128)."));
+  
+  
+  if (passwordLength <= 128 && passwordLength >= 8){
+    alert("Your password will be " + passwordLength + " characters in length.");
+    } else {
+    passwordLength=prompt('Please select a password length (must be between 8 and 128).');
+    return generatePassword();
+  }
+  
+    console.log(passwordLength);
+
+ 
   // b) need to prompt if user wants lower, upper, numeric, or special characters.
   //2. validate the input. Atleast one character type is being selected and length in range. 
   //3. need to generate password. 
