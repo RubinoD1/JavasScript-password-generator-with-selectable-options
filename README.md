@@ -1,6 +1,6 @@
 # Generate Random Password 
-live URL: 
-Git repository: 
+live URL: https://rubinod1.github.io/JavasScript-password-generator-with-selectable-options/
+Git repository: https://github.com/RubinoD1/JavasScript-password-generator-with-selectable-options
 
 WHEN I click the button to generate a password
 - Created a function "generatePassword", that is linked to an event listener that triggers on the user clicking the "generate" button on the webpage.
@@ -18,3 +18,5 @@ The password is either displayed in an alert or written to the page
 
 
 screenshots: 
+![Live site screenshots](assets\images\screenshot 1.png)
+![Live site screenshots](assets\images\screenshot 2.png)

@@ -6,7 +6,7 @@ function generatePassword(){
     window.alert("Your password will be " + passwordLength + " characters in length.");
     passwordLength = parseInt(passwordLength);
    
-    } else {
+  } else {
     passwordLength=prompt('Please select a password length (must be between 8 and 128).');
     return generatePassword();
   }
@@ -62,7 +62,7 @@ function generatePassword(){
       password += charset.charAt(Math.floor(Math.random() * n));
   }
  
-  return password;
+return password;
 };
 
 // Get references to the #generate element - this targets the generate id (which is a button)
