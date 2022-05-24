@@ -17,7 +17,7 @@ The password is either displayed in an alert or written to the page
 - The password is written on the webpage once the user successfully defines the password's parameters.  
 
 
-Images: 
-![Live site screenshots](/assets/images/screenshot%201.pngassets)
+Images: ![Live site screenshots](/assets/images/screenshot%201.pngassets)
+
 ![Live site screenshots](/assets/images/screenshot%202.png)
 
