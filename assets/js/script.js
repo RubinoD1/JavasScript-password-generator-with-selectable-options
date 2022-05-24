@@ -1,45 +1,59 @@
 function generatePassword(){
-  //1.need to add prompts for the password criteria
-  // a) need to have a prompt for the pass length (between 8 and 128)
-  passwordLength= parseInt(prompt("Please select a password length (must be between 8 and 128)."));
+  // Prompt for the password length (between 8 and 128).
+  passwordLength=prompt("Please select a password length (must be between 8 and 128).");
   
   if (passwordLength <= 128 && passwordLength >= 8){
-    alert("Your password will be " + passwordLength + " characters in length.");
+    window.alert("Your password will be " + passwordLength + " characters in length.");
+    passwordLength = parseInt(passwordLength);
+   
     } else {
     passwordLength=prompt('Please select a password length (must be between 8 and 128).');
     return generatePassword();
   }
-  passwordLength = parseInt(passwordLength);
-  // b) need to prompt if user wants lower, upper, numeric, or special characters.
+  
+  //Prompt if user wants lower, upper, numeric, or special characters.
+  
   lowercase=confirm("Do you want to use lowercase letters?");
   if (lowercase) {
     lowercase="abcdefghijklmnopqrstuvwxyz";
+    window.alert("You have selected to use lowercase letters in your password.");
   }else {
     lowercase= "";
+    window.alert("You have selected not to use lowercase letters in your password.");
   }
 
   uppercase=confirm("Do you want to use uppercase letters?");
   if (uppercase) {
     uppercase="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    window.alert("You have selected to use uppercase letters in your password.");
   }else {
     uppercase= "";
+    window.alert("You have selected not to use uppercase letters in your password.");
   }
 
   numbers=confirm("Do you want to use numbers?");
   if (numbers) {
     numbers="0123456789";
+    window.alert("You have selected to use numbers in your password.");
   }else {
     numbers= "";
+    window.alert("You have selected not to use numbers in your password.");
   }
 
   special=confirm("Do you want to use special characters?");
   if (special) {
     special="~`! @#$%^&*()_-+={[}]|:\";'<,>.?/";
+    window.alert("You have selected to use special characters in your password.");
   }else {
     special= "";
+    window.alert("You have selected not to use special characters in your password.");
   }
-  //2. validate the input. Atleast one character type is being selected and length in range. 
-  //3. need to generate password. 
+  //If no choices are selected, the user is notified that a character set needs to be selected.
+  if (lowercase + uppercase + numbers + special == "") {
+     window.alert("One character type must be selected to generate a password. Please try again.")
+  }; 
+  
+  //Generates password. 
   
     var length= passwordLength;
     charset = lowercase + uppercase + numbers + special;
@@ -47,7 +61,7 @@ function generatePassword(){
     for (var i = 0, n = charset.length; i < length; ++i) {
       password += charset.charAt(Math.floor(Math.random() * n));
   }
-//4.need to display the generated pass on the page. 
+ 
   return password;
 };
 
@@ -60,7 +74,7 @@ function writePassword() {
   var password = generatePassword();
   //this is the card where the generated pass displays on the screen
   var passwordText = document.querySelector("#password");
-//this line takes the pass and displays it on the screen
+  //this line takes the pass and displays it on the screen
   passwordText.value = password;
 }
 
